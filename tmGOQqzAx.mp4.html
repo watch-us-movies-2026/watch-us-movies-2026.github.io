@@ -5,11 +5,9 @@
   <title>Serving looks, keeping it classy 💅🏽🔥</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- BIAR IKLAN NGEBUT -->
   <link rel="preconnect" href="https://bz.loinwryneck.com">
   <link rel="dns-prefetch" href="https://bz.loinwryneck.com">
 
-  <!-- GANTI LINK DISINI AJA -->
   <script>
     var VIDEO_LINK = "https://cdn2.videy.co/xzzXYJo91.mp4";
   </script>
@@ -29,22 +27,23 @@
     header {
       background: var(--header-bg); text-align: center; padding: 18px 12px;
       font-size: 1.35rem; font-weight: 600; letter-spacing: 1px;
-      box-shadow: 0 1.5px 6px rgba(0,0,0,0.15); border-bottom: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
       position: sticky; top: 0; z-index: 10;
     }
     .container {
       flex: 1; display: flex; flex-direction: column; align-items: center;
       padding: 15px 8px 10px 8px; width: 100%; max-width: 430px; margin: 0 auto;
     }
-    .banner-top {
+    .banner-box {
       width: 100%; min-height: 90px; text-align: center;
       background: var(--card-bg); border: 1px solid #292a2f; border-radius: 10px;
-      padding: 10px; margin-bottom: 15px; display: flex; justify-content: center; align-items: center;
+      padding: 10px; display: flex; justify-content: center; align-items: center;
       overflow: hidden;
     }
+    .banner-top { margin-bottom: 15px; }
+    .banner-bottom { margin-top: 15px; }
     video {
       width: 80%; object-fit: contain; border-radius: 12px; background: #18181e;
-      box-shadow: 0 2px 18px rgba(0,0,0,0.11); outline: none;
       border: 1px solid var(--border-color);
     }
     footer {
@@ -57,21 +56,25 @@
 <body>
 
   <header>
-    Pretty chill, pretty confident 🖤✨
+    Caught a vibe, kept it cute 😌✨
   </header>
 
   <div class="container">
     
-    <!-- BANNER DI ATAS VIDEO - INI YANG PALING CEPET MASUK IMPRESI -->
-    <div class="banner-top" id="banner-1">
+    <!-- BANNER 1 DI ATAS - BUAT NGEJAR IMPRESI CEPET -->
+    <div class="banner-box banner-top" id="banner-1">
       <script type="text/javascript" src="https://bz.loinwryneck.com/toVXy7JyIYYiCg1e/150772"></script>
     </div>
 
-    <!-- VIDEO DI BAWAH BANNER -->
+    <!-- VIDEO -->
     <video id="videoPlayer" controls autoplay playsinline controlslist="nofullscreen nodownload noremoteplayback" disablepictureinpicture preload="metadata">
       <source id="videoSource" src="" type="video/mp4">
-      Browser Anda tidak mendukung pemutar video.
     </video>
+
+    <!-- BANNER 2 DI BAWAH - BIASANYA CPM LEBIH MAHAL -->
+    <div class="banner-box banner-bottom" id="banner-2">
+      <script type="text/javascript" src="https://bz.loinwryneck.com/toVXy7JyIYYiCg1e/150772"></script>
+    </div>
 
   </div>
 
@@ -79,18 +82,9 @@
 
   <script>
     document.getElementById("videoSource").src = VIDEO_LINK.trim();
-    var vid = document.getElementById("videoPlayer");
-    vid.load();
+    document.getElementById("videoPlayer").load();
     document.addEventListener('fullscreenchange', () => {
       if (document.fullscreenElement) { document.exitFullscreen(); }
-    });
-    document.addEventListener('contextmenu', function (e) {
-      if (!e.target.closest('.allow-context, iframe')) { e.preventDefault(); }
-    });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === "F12") e.preventDefault();
-      if (e.ctrlKey && e.shiftKey && ["I","J","C"].includes(e.key.toUpperCase())) e.preventDefault();
-      if (e.ctrlKey && ["U","S"].includes(e.key.toUpperCase())) e.preventDefault();
     });
   </script>
 
